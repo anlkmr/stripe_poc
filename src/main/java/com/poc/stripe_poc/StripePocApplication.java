@@ -1,5 +1,6 @@
 package com.poc.stripe_poc;
 
+
 import ch.qos.logback.core.net.SyslogOutputStream;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
@@ -10,16 +11,35 @@ import com.stripe.param.CustomerCreateParams;
 import com.stripe.param.CustomerListParams;
 import com.stripe.param.CustomerSearchParams;
 import com.stripe.param.CustomerUpdateParams;
+
+import com.poc.stripe_poc.service.PaymentIntentService;
+import com.poc.stripe_poc.service.impl.PaymentIntentServiceImpl;
+import com.stripe.Stripe;
+import com.stripe.model.PaymentIntent;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Service;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 
 import java.util.HashMap;
 import java.util.Map;
 
 @SpringBootApplication
+//@EnableSwagger2
 public class StripePocApplication {
 
+
 	public static void main(String[] args) {
+
+
+		SpringApplication.run(StripePocApplication.class, args);
+		//PaymentIntentService paymentIntentService = new PaymentIntentServiceImpl();
+		//PaymentIntent intent = paymentIntentService.create();
+		//paymentIntentService.confirm("pi_3NcMdmSDgUA7ttRn1C9rltUN");
 
 		//SpringApplication.run(StripePocApplication.class, args);
 		try {
@@ -159,6 +179,7 @@ public class StripePocApplication {
 		} catch (StripeException e) {
 			System.out.println(e);
 		}
+
 	}
 
 }
