@@ -3,6 +3,16 @@ package com.poc.stripe_poc.model;
 public class CustomerData {
     public String name;
     public String email;
+    public String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public String customerId;
 
     public String getName() {

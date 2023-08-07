@@ -31,27 +31,23 @@ import java.util.Map;
 @SpringBootApplication
 //@EnableSwagger2
 public class StripePocApplication {
-
-
 	public static void main(String[] args) {
-
-
 		SpringApplication.run(StripePocApplication.class, args);
 		//PaymentIntentService paymentIntentService = new PaymentIntentServiceImpl();
 		//PaymentIntent intent = paymentIntentService.create();
 		//paymentIntentService.confirm("pi_3NcMdmSDgUA7ttRn1C9rltUN");
 
 		//SpringApplication.run(StripePocApplication.class, args);
-		try {
+		//try {
 			//createCustomer();
 			//createCustomerWParams_PM_InvSettings();
-			getCustomers();
+			//getCustomers();
 			//updateCustomer();
 			//deleteCustomer();
 			//searchCustomers();//temorarily not available in the region.
-		} catch(Exception e){
-			System.out.println(e);
-		}
+		//} catch(Exception e){
+		//	System.out.println(e);
+		//}
 	}
 
 	private static void createCustomerWParams_PM_InvSettings() {
