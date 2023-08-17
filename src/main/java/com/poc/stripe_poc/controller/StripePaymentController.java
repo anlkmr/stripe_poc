@@ -31,7 +31,7 @@ public class StripePaymentController {
     public String customer(Model model) throws StripeException {
         Stripe.apiKey = stripeKey;
         //CustomerListParams params = CustomerListParams.builder().build();
-        //Map<String, Object> params = new HashMap<>();
+        //Map<String, Object> params = new HashMap<>(); added for test
         CustomerListParams params = CustomerListParams.builder()
                 //.setEmail("use the stored email")
                 .setLimit(3L)
